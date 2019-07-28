@@ -1,4 +1,5 @@
 pipeline {
+<<<<<<< HEAD
     agent {
         docker {
             image 'node:6-alpine'
@@ -27,3 +28,20 @@ pipeline {
             }
         }
     }
+=======
+  agent {
+    docker {
+      image 'node:6-alpine'
+      args '-p 3000:3000'
+    }
+
+  }
+  stages {
+    stage('Build') {
+      steps {
+        sh 'npm install'
+      }
+    }
+  }
+}
+>>>>>>> 7b9e703c72665d463e759218170c17fd750ea1b0
